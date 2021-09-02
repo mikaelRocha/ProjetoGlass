@@ -4,6 +4,7 @@
 	font-family:'fontelogo' ;
 	src: url("../_fonts/bubblegum-sans-regular.otf"); /*importando do pc*/
 }
+
 body{
 	background-color: #dddddd;
 	font-family: Arial, sans-serif;
@@ -32,7 +33,7 @@ div#interface {
  box-shadow:2px 3px 5px rgba(0, 0, 0, .2);
 
 }
-/*###################################cabeçalho##############################*/
+/*                                 ###################################      cabeçalho     ##############################           */
 header#cabecalho img#icone{
 	position: absolute;
 	left:990px ;
@@ -63,7 +64,7 @@ header#cabecalho h2 {
 
 }
 
-/*############################ Formatando imagem e legenda ########################## */
+/*                                 ############################       Formatando imagem e legenda      ##########################          */
 figure.fotolegenda {
 	border: 5px solid white;
 	width: 500px;
@@ -96,7 +97,7 @@ figure.fotolegenda figcaption{
 figure.fotolegenda:hover figcaption{
 	opacity: 1;
 }
-					/*######################### Formatação do menu #################################   */
+					/*          #########################          Formatação do menu         #################################            */
 nav#menu {
 	display: block;
 }
@@ -148,7 +149,7 @@ nav#menu h1{
 	display: none;
 }
 
-/*##################################     Organização    ##########################################*/
+/*                 ##################################     divisão de seçoes    ##########################################       */
 section#corpo {
 	display: block;
 	width: 600px;
@@ -158,8 +159,17 @@ section#corpo {
 }
 aside#lateral{
 	display: block;
-	width: 300px;
+	width: 370px;
 	float: right;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right:-8px;
+	background-color: #dddddd;
+	padding: 7px;
+	border-radius: 20px 0px 20px 20px;
+	box-shadow: 1px 1px 5px #ddd;
+
+
 }
 footer#rodape {
 	clear: both;
@@ -169,10 +179,11 @@ footer#rodape p {
 	text-align: center;
 }
 
-/*#############   Tabela   ####################################*/
+/*                         #################################   Tabela   ####################################             */
 table#tabelaspec {
 border: 1px solid #606060;
 border-spacing: 0px;
+margin: auto;
 }
 table#tabelaspec td {
 	border: 1px solid #606060;
@@ -207,7 +218,7 @@ table#tabelaspec caption span{
 
 
 }
-/*   #####################          Artigo      #################### */
+/*   #####################          Artigos      #################### */
 article#noticia-principal h2{
 
 	font-size: 12pt;
@@ -242,3 +253,21 @@ header#cabecalho-artigo h3{
 .cd{
 	text-align: right;
 }
+
+/* ############         Aside            ################# */
+aside#lateral h1{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+}
+aside#lateral h2{
+	background-color: #606060;
+	font-size: 15pt;
+	color: #ffffff;
+	padding: 5px;
+	text-align: center;
+
+
+
+}
+
