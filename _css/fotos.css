@@ -35,9 +35,9 @@ ul#album-fotos li:hover span{
 }
  /*#################### colocando as imagens ########################## */
  ul#album-fotos li{
- 	-webkit-transition:0.4s;
+ 	-webkit-transition:all 0.4s ease-in;
  }
- 
+
 ul#album-fotos li#foto01{
 	background-position: 50% 50%;
 	background: url("../_imagens/galeria-01.jpg") no-repeat;

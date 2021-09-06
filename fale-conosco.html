@@ -1,91 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_css/estilo.css">
-    <title>Tudo sobre google Glass</title>
-     
+    <link rel="stylesheet" href="_css/form.css">
+    <title>Fale conosco </title>
     <script type="text/javascript" src="_javascript/funcoes.js"></script>
-    </head>
+    <script >
+        function calc_total (){
+            var qtd = parseInt(document.getElementById("cQuant").value);
+            tot = qtd * 1500;
+            document.getElementById("cTotal").value =tot;
 
-    <body >
+        }
+    </script>
 
-<div id="interface">
+</head>
+
+<body >
+
+    <div id="interface">
 
 
-    <header id="cabecalho">
-       <hgroup>
-         <h1>Google Glass</h1>
-         <h2>A revolução do Google está chegando</h2>
-       </hgroup>
-        <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
-        <nav id="menu">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+            <nav id="menu">
 
-            <h1>Menu Principal</h1>
-            <ul>
-                <li onmouseover="mudaFoto('_imagens/home.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
-                    <a href="index.html">Home</a>
-                </li>
-                <li onmouseover="mudaFoto('_imagens/especificacoes.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
-                    <a href="specs.html">Especificações</a></li>
-                <li onmouseover="mudaFoto('_imagens/fotos.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
-                    <a href="fotos.html"> Fotos</a>
-                </li>
-                <li onmouseover="mudaFoto('_imagens/multimidia.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
-                    <a href="multimidia.html"> Multimídia</a>
-                </li>
-                <li onmouseover="mudaFoto('_imagens/contato.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
-                    <a href="fale-conosco.html"> Fale conosco</a>
-                </li>
-            </ul>
-    
-        </nav>
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudaFoto('_imagens/home.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="fotos.html"> Fotos</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="multimidia.html"> Multimídia</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')"   onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="fale-conosco.html"> Fale conosco</a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </header>
+    <header id="cabecalho-artigo">
+        <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
     </header>
+        <form  method="post"  id="fcontato" action="mikaelrochadejesus@gmail.com" oninput="calc_total()">
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+            <fieldset id="usuario">
+                
+                <legend>Identificação do Usuário</legend>
+                <div id="conteiner">
+                <p> 
+                    <span><label for="cnome">Nome:</label></span> 
+                    <input type="text" name="tNome" id="cNome" placeholder="Nome completo"> 
+                </p>
+                <p> 
+                    <span><label for="csenha">Senha:</label></span>
+                    <input type="password" name="tSenha" id="cSenha" placeholder="************"> 
+                </p>
+                <p> 
+                    <span><label for="cemail">E-mail:</label></span>
+                    <input type="email" name="tMail" id="cMail" placeholder="exemplo@exemplo.com">
+                </p>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+                <fieldset id="sexo">
+                    <legend>Sexo:</legend>
+                    
+                    <span><label for="mas">Masculino:</label></span>
+                    <input type="radio" name="femasc" id="mas">
+                   
+                    <br/>
+                    <span><label for="fem">Feminino:</label></span>
+                    <input type="radio" name="femasc" id="fem">   
+                </fieldset>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+                <p>
+                    <label for="cNasc">Data de Nascimento:</label>
+                    <input type="date" name="tNasc" id="cNasc">
+                </p>
+                </div>
+            </fieldset>
+            
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+            <fieldset id="endereco">
+                <legend>Endereço do Usuário</legend>
+                <p>
+                    <span><label for="cLogra">Logradouro:</label></span>
+                    <input type="" name="tLogra" id="cLogra">
+                </p>
+                <p>
+                    <span><label for="cNumero">Número:</label></span>
+                    <input type="" name="tNumero" id="cNumero"></p>
+                <p>
+                    <span><label for="cesta">Estado:</label></span>
+                    <select name="tEst" id="cEst">
+                        <option>Selecionar...</option>
+                        <optgroup label="Sudeste">
+                            <option >Rio de Janeiro -RJ</option>
+                            <option>São Paulo-SP</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option>Santa Catarina-SC</option>
+                            <option>Parana-PR</option>
+                            <option>Rio Grande do Sul - RS</option>
+                        </optgroup>
+                    </select>     
+                </p>
+                <p> 
+                    <span><label for="cCid">Cidade:</label></span>
+                    <input type="" name="tGid" id="cCid" placeholder="Sua cidade" list="cidades">
+                    <datalist id="cidades">
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Nova Iguaçu"></option>
+                        <option value="Niteroi"></option>
+                        <option value="Belford Roxo"></option>
+                        
+                    </datalist>
+                </p> 
+            </fieldset>
+                                            <!--/-->
+            <fieldset id="mensagem">
+                 
+                    <legend>Mensagem do Usuário</legend>
+                
+                <p> 
+                    <label for="cGrau">Grau de Urgência:</label>
+                    <input type="range" name="tGrau" id="cGrau" min="0" max="100" step="3">
+                </p>
+                <p>
+                    <label for="cMens">Mensagem:</label>
+                    <textarea name="tMens" id="cMens" cols="40" rows="10"></textarea>
+                </p>
+            </fieldset>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+             <fieldset id="pedido">
+                <legend>Quero um Google Glass</legend>
+                <p> <input type="checkbox" name="tPed" id="cPed">
+                    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                </p>
+                <p> 
+                    <span><label for="cCor">Cor:</label></span>
+                    <input type="color" name="tCor" id="cCor">        
+                </p>
+                <p>
+                    <span><label for="cQuant">Quantidade:</label></span>
+                    <input type="number" name="tQuant" id="cQuant">
+                </p>
+                <p>
+                    <span><label for="cTotal">Preço Total:R$</label></span>
+                    <input type="text" name="tTotal" id="cTotal" readonly placeholder="Total a pagar">
+                </p>
+            </fieldset>
+            
 
 
-[BOTÃO ENVIAR]
+           
+           <input type="image" name="enviar" id="botaoenv" src="_imagens/botao-enviar.png">
+        </form>
 
 
-    <footer id="rodape">
-    <p>Copyright 2013 - by Gustavo Guanabara</p>
-    <p>
-        <a href="http://facebook.com">Facebook</a> | 
-        <a href="http://facebook.com">Twitter</a>
-    </p>
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara</p>
+            <p>
+                <a href="http://facebook.com">Facebook</a> | 
+                <a href="http://facebook.com">Twitter</a>
+            </p>
+        </footer>
 
-</div>
+    </div>
 
 </body>
 </html>
